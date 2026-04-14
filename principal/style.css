@@ -1,0 +1,137 @@
+:root {
+    /* Paleta de colores Premium - Dark Theme - Bootstrap compat */
+    --bs-body-bg: #0f172a; /* Slate 900 overriding default bootstrap blackish */
+    --text-primary: #f8fafc;
+    --text-secondary: #94a3b8;
+    
+    /* Colores por Asignatura */
+    --color-math: #ef4444; /* Rojo */
+    --color-lang: #3b82f6; /* Azul */
+    --color-sci: #10b981; /* Verde */
+    --color-hist: #f59e0b; /* Naranja/Ámbar */
+    --color-eng: #8b5cf6; /* Violeta */
+    
+    /* Efectos de cristal */
+    --glass-bg: rgba(30, 41, 59, 0.6);
+    --glass-border: rgba(255, 255, 255, 0.08);
+    --card-hover: rgba(51, 65, 85, 0.8);
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    /* Efecto Glassmorphism con fondo animado sutil */
+    background-image: 
+        radial-gradient(circle at 15% 50%, rgba(59, 130, 246, 0.15), transparent 25%),
+        radial-gradient(circle at 85% 30%, rgba(239, 68, 68, 0.1), transparent 25%);
+    background-color: var(--bs-body-bg) !important;
+    background-attachment: fixed;
+}
+
+.header-title {
+    background: linear-gradient(135deg, #ffffff 0%, #cbd5e1 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: -0.02em;
+}
+
+.glass-column {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+}
+
+.badge-glass {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.activity-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--glass-border);
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.activity-card::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background-color: var(--subject-color, #ffffff);
+    transition: width 0.2s ease;
+}
+
+.activity-card:hover {
+    background: var(--card-hover);
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+    border-color: rgba(255, 255, 255, 0.15);
+}
+
+.activity-card:hover::before {
+    width: 6px;
+}
+
+.activity-icon {
+    color: var(--subject-color, #ffffff);
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.activity-subject {
+    color: var(--subject-color, #ffffff);
+    letter-spacing: 0.08em;
+}
+
+/* Modal styles overrides for glassmorphism */
+.glass-modal {
+    background: #1e293b !important;
+    border: 1px solid var(--glass-border) !important;
+}
+
+.custom-close {
+    filter: invert(1) grayscale(100%) brightness(200%);
+    opacity: 0.5;
+}
+
+.custom-close:hover {
+    opacity: 1;
+}
+
+.tag-subject {
+    background: rgba(255, 255, 255, 0.08);
+    color: var(--subject-color);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.tag-type {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.resource-link {
+    background: rgba(0, 0, 0, 0.2);
+    border: 1px solid var(--glass-border);
+    transition: all 0.2s;
+    text-decoration: none;
+}
+
+.resource-link:hover {
+    background: rgba(255, 255, 255, 0.07);
+    border-color: rgba(255, 255, 255, 0.2);
+    transform: translateX(4px);
+}
+
+.resource-link i {
+    color: var(--color-lang); /* Azul por defecto para recursos */
+}

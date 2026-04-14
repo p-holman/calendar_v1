@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es" data-bs-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subir Actividad - Panel de Profesores</title>
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Iconos Phosphor -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Hoja de estilos complementaria -->
+    <link rel="stylesheet" href="../principal/style.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-overall">
+    <div class="container py-5">
+        <header class="text-center mb-5">
+            <h1 class="display-5 fw-bold header-title">Panel de Profesores</h1>
+            <p class="lead text-secondary">Añadir Nueva Actividad Escolar</p>
+        </header>
+
+        <main class="row justify-content-center">
+            <div class="col-lg-8 col-xl-7">
+                <div class="glass-column p-4 p-md-5 rounded-4 shadow-sm">
+                    <form action="#" method="POST" enctype="multipart/form-data" id="activityForm">
+
+                        <!-- Tipo de Actividad -->
+                        <div class="mb-4">
+                            <label class="form-label fw-semibold text-white mb-3">Tipo de Actividad</label>
+                            <div class="d-flex flex-wrap gap-2">
+                                <input type="radio" class="btn-check" name="tipoActividad" id="tipoTarea" value="tarea"
+                                    required>
+                                <label class="btn btn-outline-light rounded-pill px-4 d-flex align-items-center gap-2"
+                                    for="tipoTarea">
+                                    <i class="ph ph-notebook fs-5"></i> Tarea
+                                </label>
+
+                                <input type="radio" class="btn-check" name="tipoActividad" id="tipoPrueba"
+                                    value="prueba">
+                                <label class="btn btn-outline-light rounded-pill px-4 d-flex align-items-center gap-2"
+                                    for="tipoPrueba">
+                                    <i class="ph ph-exam fs-5"></i> Prueba
+                                </label>
+
+                                <input type="radio" class="btn-check" name="tipoActividad" id="tipoMaterial"
+                                    value="material">
+                                <label class="btn btn-outline-light rounded-pill px-4 d-flex align-items-center gap-2"
+                                    for="tipoMaterial">
+                                    <i class="ph ph-books fs-5"></i> Material Requerido
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Asignatura y Curso -->
+                        <div class="row g-4 mb-4">
+                            <div class="col-md-6">
+                                <label for="asignatura" class="form-label fw-semibold text-white">Asignatura</label>
+                                <select class="form-select glass-input text-white" id="asignatura" name="asignatura"
+                                    required>
+                                    <option value="" selected disabled>Selecciona una asignatura...</option>
+                                    <option value="matematicas">Matemáticas</option>
+                                    <option value="lenguaje">Lenguaje y Comunicación</option>
+                                    <option value="ciencias">Ciencias Naturales</option>
+                                    <option value="historia">Historia y Geografía</option>
+                                    <option value="ingles">Inglés</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="curso" class="form-label fw-semibold text-white">Curso</label>
+                                <select class="form-select glass-input text-white" id="curso" name="curso" required>
+                                    <option value="" selected disabled>Selecciona el curso...</option>
+                                    <option value="1b">1° Básico</option>
+                                    <option value="2b">2° Básico</option>
+                                    <!-- Agrega saltos por defecto o rangos representativos -->
+                                    <option value="1m">1° Medio</option>
+                                    <option value="2m">2° Medio</option>
+                                    <option value="3m">3° Medio</option>
+                                    <option value="4m">4° Medio</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- Título -->
+                        <div class="mb-4">
+                            <label for="titulo" class="form-label fw-semibold text-white">Título de la Actividad</label>
+                            <input type="text" class="form-control glass-input text-white" id="titulo" name="titulo"
+                                placeholder="Ej: Control de lectura 'El Túnel'" required>
+                        </div>
+
+                        <!-- Descripción -->
+                        <div class="mb-4">
+                            <label for="descripcion" class="form-label fw-semibold text-white">Descripción /
+                                Instrucciones</label>
+                            <textarea class="form-control glass-input text-white" id="descripcion" name="descripcion"
+                                rows="4" placeholder="Detalla las instrucciones o los temas de la evaluación..."
+                                required></textarea>
+                        </div>
+
+                        <!-- Fecha -->
+                        <div class="mb-4">
+                            <label for="fecha" class="form-label fw-semibold text-white">Fecha de Entrega o
+                                Evaluación</label>
+                            <input type="date" class="form-control glass-input text-white" id="fecha" name="fecha"
+                                required>
+                        </div>
+
+                        <!-- Archivos Adjuntos -->
+                        <div class="mb-5">
+                            <label for="archivo" class="form-label fw-semibold text-white">Archivo Adjunto
+                                (Opcional)</label>
+                            <input class="form-control glass-input text-white" type="file" id="archivo" name="archivo">
+                            <div class="form-text text-secondary mt-2 d-flex align-items-center gap-1">
+                                <i class="ph ph-info"></i> Puedes subir guías, pautas o rúbricas (PDF, Word, Excel,
+                                etc).
+                            </div>
+                        </div>
+
+                        <!-- Boton Enviar -->
+                        <div class="d-flex justify-content-end gap-3 mt-2 border-top border-secondary pt-4">
+                            <!-- pendiente -->
+                            <a href="/" class="btn btn-outline-secondary px-4 rounded-pill">Cancelar</a>
+                            <button type="submit"
+                                class="btn btn-primary px-4 rounded-pill d-flex align-items-center gap-2">
+                                <i class="ph ph-paper-plane-right fs-5"></i> Publicar Actividad
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
