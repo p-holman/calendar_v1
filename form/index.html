@@ -13,7 +13,7 @@
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
     <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Hoja de estilos complementaria -->
+    <!-- Hoja de estilos -->
     <link rel="stylesheet" href="../css/global.css">
 </head>
 
@@ -35,21 +35,24 @@
                             <div class="d-flex flex-wrap gap-2">
                                 <input type="radio" class="btn-check" name="tipoActividad" id="tipoTarea" value="tarea"
                                     required>
-                                <label class="btn btn-outline-secondary rounded-pill px-4 d-flex align-items-center gap-2"
+                                <label
+                                    class="btn btn-outline-secondary rounded-pill px-4 d-flex align-items-center gap-2"
                                     for="tipoTarea">
                                     <i class="ph ph-notebook fs-5"></i> Tarea
                                 </label>
 
                                 <input type="radio" class="btn-check" name="tipoActividad" id="tipoPrueba"
                                     value="prueba">
-                                <label class="btn btn-outline-secondary rounded-pill px-4 d-flex align-items-center gap-2"
+                                <label
+                                    class="btn btn-outline-secondary rounded-pill px-4 d-flex align-items-center gap-2"
                                     for="tipoPrueba">
                                     <i class="ph ph-exam fs-5"></i> Prueba
                                 </label>
 
                                 <input type="radio" class="btn-check" name="tipoActividad" id="tipoMaterial"
                                     value="material">
-                                <label class="btn btn-outline-secondary rounded-pill px-4 d-flex align-items-center gap-2"
+                                <label
+                                    class="btn btn-outline-secondary rounded-pill px-4 d-flex align-items-center gap-2"
                                     for="tipoMaterial">
                                     <i class="ph ph-books fs-5"></i> Material Requerido
                                 </label>
@@ -60,8 +63,8 @@
                         <div class="row g-4 mb-4">
                             <div class="col-md-6">
                                 <label for="asignatura" class="form-label fw-semibold text-dark">Asignatura</label>
-                                <select class="form-select bg-light text-dark border-light-subtle" id="asignatura" name="asignatura"
-                                    required>
+                                <select class="form-select bg-light text-dark border-light-subtle" id="asignatura"
+                                    name="asignatura" required>
                                     <option value="" selected disabled>Selecciona una asignatura...</option>
                                     <option value="matematicas">Matemáticas</option>
                                     <option value="lenguaje">Lenguaje y Comunicación</option>
@@ -72,15 +75,17 @@
                             </div>
                             <div class="col-md-6">
                                 <label for="curso" class="form-label fw-semibold text-dark">Curso</label>
-                                <select class="form-select bg-light text-dark border-light-subtle" id="curso" name="curso" required>
+                                <select class="form-select bg-light text-dark border-light-subtle" id="curso"
+                                    name="curso" required>
                                     <option value="" selected disabled>Selecciona el curso...</option>
                                     <option value="1b">1° Básico</option>
                                     <option value="2b">2° Básico</option>
-                                    <!-- Agrega saltos por defecto o rangos representativos -->
-                                    <option value="1m">1° Medio</option>
-                                    <option value="2m">2° Medio</option>
-                                    <option value="3m">3° Medio</option>
-                                    <option value="4m">4° Medio</option>
+                                    <option value="3b">3° Básico</option>
+                                    <option value="4b">4° Básico</option>
+                                    <option value="5b">5° Básico</option>
+                                    <option value="6b">6° Básico</option>
+                                    <option value="7b">7° Básico</option>
+                                    <option value="8b">8° Básico</option>
                                 </select>
                             </div>
                         </div>
@@ -88,16 +93,17 @@
                         <!-- Título -->
                         <div class="mb-4">
                             <label for="titulo" class="form-label fw-semibold text-dark">Título de la Actividad</label>
-                            <input type="text" class="form-control bg-light text-dark border-light-subtle" id="titulo" name="titulo"
-                                placeholder="Ej: Control de lectura 'El Túnel'" required>
+                            <input type="text" class="form-control bg-light text-dark border-light-subtle" id="titulo"
+                                name="titulo" placeholder="Ej: Control de lectura 'El Túnel'" required>
                         </div>
 
                         <!-- Descripción -->
                         <div class="mb-4">
                             <label for="descripcion" class="form-label fw-semibold text-dark">Descripción /
                                 Instrucciones</label>
-                            <textarea class="form-control bg-light text-dark border-light-subtle" id="descripcion" name="descripcion"
-                                rows="4" placeholder="Detalla las instrucciones o los temas de la evaluación..."
+                            <textarea class="form-control bg-light text-dark border-light-subtle" id="descripcion"
+                                name="descripcion" rows="4"
+                                placeholder="Detalla las instrucciones o los temas de la evaluación..."
                                 required></textarea>
                         </div>
 
@@ -105,15 +111,16 @@
                         <div class="mb-4">
                             <label for="fecha" class="form-label fw-semibold text-dark">Fecha de Entrega o
                                 Evaluación</label>
-                            <input type="date" class="form-control bg-light text-dark border-light-subtle" id="fecha" name="fecha"
-                                required>
+                            <input type="date" class="form-control bg-light text-dark border-light-subtle" id="fecha"
+                                name="fecha" required>
                         </div>
 
                         <!-- Archivos Adjuntos -->
                         <div class="mb-5">
                             <label for="archivo" class="form-label fw-semibold text-dark">Archivo Adjunto
                                 (Opcional)</label>
-                            <input class="form-control bg-light text-dark border-light-subtle" type="file" id="archivo" name="archivo">
+                            <input class="form-control bg-light text-dark border-light-subtle" type="file" id="archivo"
+                                name="archivo">
                             <div class="form-text text-secondary mt-2 d-flex align-items-center gap-1">
                                 <i class="ph ph-info"></i> Puedes subir guías, pautas o rúbricas (PDF, Word, Excel,
                                 etc).

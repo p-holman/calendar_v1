@@ -1,37 +1,27 @@
 :root {
-    /* Tipografía y estilos base globales compartidos */
+    /* Estilos globales */
     --bs-body-bg: #f8f9fa;
-    /* Fondo genérico muy claro */
+
     --bs-body-font-family: 'Inter', sans-serif;
 
     /* Colores por Asignatura */
     --color-math: #ef4444;
-    /* Rojo */
     --color-lang: #3b82f6;
-    /* Azul */
     --color-sci: #10b981;
-    /* Verde */
     --color-hist: #f59e0b;
-    /* Naranja/Ámbar */
     --color-eng: #8b5cf6;
-    /* Violeta */
 }
 
 body {
     background-color: var(--bs-body-bg);
 }
 
-/* 
- * Utilidades compartidas 
- */
 
-/* Títulos con gradiente sutil, más claro para light mode (opcional) o texto oscuro */
 .header-title {
     color: #0f172a;
     letter-spacing: -0.02em;
 }
 
-/* Ajustes utilitarios para consistencia a lo largo de las vistas */
 .activity-card {
     cursor: pointer;
     transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);

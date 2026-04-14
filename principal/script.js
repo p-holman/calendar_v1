@@ -1,8 +1,4 @@
-/**
- * Script para gestionar la vista de enfoque del calendario escolar (Bootstrap Version)
- */
-
-// Modelos de datos para asignaturas (Codificación visual por color)
+// Modelos de datos para asignaturas
 const subjects = {
     math: { name: 'Matemáticas', color: 'var(--color-math)' },
     lang: { name: 'Lenguaje y Com.', color: 'var(--color-lang)' },
@@ -11,14 +7,14 @@ const subjects = {
     eng: { name: 'Inglés', color: 'var(--color-eng)' }
 };
 
-// Modelos de datos para tipos de actividad (Simbología visual)
+// Modelos de datos para tipos de actividad
 const activityTypes = {
     task: { name: 'Tarea', icon: 'ph-pencil-simple' },
     material: { name: 'Material', icon: 'ph-book-open' },
     eval: { name: 'Evaluación', icon: 'ph-bell-ringing' }
 };
 
-// Datos simulados (Mock data) demostrando el escenario descrito en el problema_solucion.md
+// Datos simulados
 const activities = [
     {
         id: 1,
@@ -84,7 +80,7 @@ document.addEventListener('DOMContentLoaded', () => {
     renderizarActividades();
 });
 
-// Configurar los encabezados de fecha dinámica
+// Establecer las fechas de hoy y mañana
 function establecerFechas() {
     const hoy = new Date();
     const manana = new Date(hoy);
@@ -102,7 +98,7 @@ function establecerFechas() {
     document.getElementById('date-manana').textContent = formatearFecha(manana);
 }
 
-// Renderizar las tarjetas de actividad correspondientes a hoy y mañana
+// Renderizar las tarjetas de actividades
 function renderizarActividades() {
     const listaHoy = document.getElementById('list-hoy');
     const listaManana = document.getElementById('list-manana');
@@ -147,7 +143,7 @@ function renderizarActividades() {
         }
     });
 
-    // Estados vacíos (Zero states)
+    // Estados vacíos
     if (listaHoy.children.length === 0) {
         listaHoy.innerHTML = `
             <div class="text-secondary text-center py-5 d-flex flex-column align-items-center gap-3 opacity-75">
@@ -167,12 +163,12 @@ function renderizarActividades() {
     }
 }
 
-// Abrir modal y poblar datos usando Bootstrap API
+// Abrir modal y poblar datos
 function abrirModal(actividad) {
     const sub = subjects[actividad.subject];
     const type = activityTypes[actividad.type];
 
-    // Ajustar cabeceras y color del tag modal
+    // Ajustar cabeceras y color
     const tagSubject = document.getElementById('modal-subject');
     tagSubject.textContent = sub.name;
     tagSubject.style.setProperty('--subject-color', sub.color);
@@ -181,7 +177,7 @@ function abrirModal(actividad) {
     document.getElementById('modal-title').textContent = actividad.title;
     document.getElementById('modal-description').textContent = actividad.description;
 
-    // Manejo de Repositorio Unificado en el modal
+    // Agregar enlaces a archivos requeridos por la actividad
     const contenedorRecursos = document.getElementById('modal-resources');
     contenedorRecursos.innerHTML = '';
 
