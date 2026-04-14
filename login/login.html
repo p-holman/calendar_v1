@@ -25,7 +25,7 @@
                 <h2 class="display-6 fw-bold header-title">Colegio John Crane</h2>
             </div>
 
-            <div class="card p-4 border-0 shadow-sm rounded-4">
+            <div class="card bg-white p-4 border-0 shadow-sm rounded-4">
                 <div class="card-body">
                     <h4 class="card-title fw-bold mb-2">Acceso Apoderados</h4>
                     <p class="text-secondary mb-4">
@@ -34,18 +34,21 @@
 
                     <form action="/solicitar-link-acceso" method="POST">
                         <div class="mb-4">
-                            <label for="email" class="form-label small fw-semibold text-secondary">Correo Electrónico</label>
+                            <label for="email" class="form-label small fw-semibold text-secondary">Correo
+                                Electrónico</label>
                             <div class="input-group">
-                                <span class="input-group-text bg-white border-end-0 text-secondary"><i class="ph ph-envelope-simple fs-5"></i></span>
-                                <input type="email" class="form-control form-control-lg border-start-0" id="email" name="email"
-                                    placeholder="ejemplo@correo.com" required autofocus
+                                <span class="input-group-text bg-white border-end-0 text-secondary"><i
+                                        class="ph ph-envelope-simple fs-5"></i></span>
+                                <input type="email" class="form-control form-control-lg border-start-0" id="email"
+                                    name="email" placeholder="ejemplo@correo.com" required autofocus
                                     oninvalid="this.setCustomValidity('Por favor, completa este campo')"
                                     oninput="this.setCustomValidity('')">
                             </div>
                         </div>
 
                         <div class="d-grid mt-5">
-                            <button type="submit" class="btn btn-primary btn-lg d-flex align-items-center justify-content-center gap-2 rounded-3">
+                            <button type="submit"
+                                class="btn btn-primary btn-lg d-flex align-items-center justify-content-center gap-2 rounded-3">
                                 <span>Enviar Enlace de Acceso</span>
                                 <i class="ph ph-paper-plane-right"></i>
                             </button>
