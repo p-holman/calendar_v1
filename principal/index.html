@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es" data-bs-theme="dark">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -14,10 +14,10 @@
     <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Hoja de estilos complementaria -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../css/global.css">
 </head>
 
-<body class="bg-overall">
+<body class="bg-light">
     <div class="container py-5">
         <header class="text-center mb-5">
             <h1 class="display-4 fw-bold header-title">Panel Central</h1>
@@ -27,11 +27,11 @@
         <main class="row g-4">
             <!-- Columna HOY -->
             <section class="col-md-6">
-                <div class="glass-column p-4 rounded-4 h-100 shadow-sm">
+                <div class="bg-white p-4 rounded-4 h-100 shadow-sm border">
                     <header
-                        class="d-flex justify-content-between align-items-center mb-4 border-bottom pb-3 header-glass border-secondary">
-                        <h2 class="h4 mb-0 fw-semibold" id="title-hoy">Hoy</h2>
-                        <span class="badge rounded-pill badge-glass text-secondary fw-medium px-3 py-2"
+                        class="d-flex justify-content-between align-items-center mb-4 border-bottom pb-3">
+                        <h2 class="h4 mb-0 fw-semibold text-dark" id="title-hoy">Hoy</h2>
+                        <span class="badge rounded-pill bg-light text-secondary border fw-medium px-3 py-2"
                             id="date-hoy"></span>
                     </header>
                     <div class="d-flex flex-column gap-3" id="list-hoy">
@@ -42,11 +42,11 @@
 
             <!-- Columna MAÑANA -->
             <section class="col-md-6">
-                <div class="glass-column p-4 rounded-4 h-100 shadow-sm">
+                <div class="bg-white p-4 rounded-4 h-100 shadow-sm border">
                     <header
-                        class="d-flex justify-content-between align-items-center mb-4 border-bottom pb-3 header-glass border-secondary">
-                        <h2 class="h4 mb-0 fw-semibold" id="title-manana">Mañana</h2>
-                        <span class="badge rounded-pill badge-glass text-secondary fw-medium px-3 py-2"
+                        class="d-flex justify-content-between align-items-center mb-4 border-bottom pb-3">
+                        <h2 class="h4 mb-0 fw-semibold text-dark" id="title-manana">Mañana</h2>
+                        <span class="badge rounded-pill bg-light text-secondary border fw-medium px-3 py-2"
                             id="date-manana"></span>
                     </header>
                     <div class="d-flex flex-column gap-3" id="list-manana">
@@ -60,20 +60,20 @@
     <!-- Bootstrap Modal para Detalles de la Actividad -->
     <div class="modal fade" id="activity-modal" tabindex="-1" aria-labelledby="modal-title" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content glass-modal border-secondary rounded-4 shadow-lg">
+            <div class="modal-content bg-white border-0 rounded-4 shadow">
                 <div class="modal-header border-0 pb-0">
                     <div class="d-flex gap-2">
                         <span class="badge rounded-pill px-3 py-2 text-uppercase fw-semibold tag-subject"
                             id="modal-subject"></span>
                         <span
-                            class="badge rounded-pill px-3 py-2 text-secondary d-flex align-items-center gap-1 tag-type border border-secondary"
+                            class="badge rounded-pill px-3 py-2 text-secondary bg-light d-flex align-items-center gap-1 border"
                             id="modal-type"></span>
                     </div>
-                    <button type="button" class="btn-close custom-close" data-bs-dismiss="modal"
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"
                         aria-label="Close"></button>
                 </div>
                 <div class="modal-body pt-3">
-                    <h2 class="h3 fw-bold mb-3 text-white" id="modal-title"></h2>
+                    <h2 class="h3 fw-bold mb-3 text-dark" id="modal-title"></h2>
                     <p class="text-secondary mb-4 fs-5 lh-base" id="modal-description"></p>
                     <div class="d-flex flex-column gap-2" id="modal-resources">
                         <!-- Los enlaces y materiales se inyectarán aquí -->

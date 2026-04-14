@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es" data-bs-theme="dark">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -12,26 +12,26 @@
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../css/global.css">
 </head>
 
-<body class="bg-overall">
+<body class="bg-light">
 
-    <div class="container h-100 d-flex align-items-center justify-content-center">
+    <div class="container vh-100 d-flex align-items-center justify-content-center py-5">
         <div class="w-100" style="max-width: 450px;">
 
             <div class="text-center mb-5">
-                <i class="ph ph-paper-plane-tilt display-1 text-white mb-3" style="opacity: 0.9;"></i>
+                <i class="ph ph-paper-plane-tilt display-1 text-primary mb-3"></i>
                 <h2 class="display-6 fw-bold header-title">Colegio John Crane</h2>
             </div>
 
-            <div class="card status-card p-4 mx-auto text-center border-secondary shadow-lg">
+            <div class="card p-4 mx-auto text-center border-0 shadow-sm rounded-4">
                 <div class="card-body">
-                    <div class="icon-box">
-                        <i class="ph ph-check text-success"></i>
+                    <div class="d-flex align-items-center justify-content-center mx-auto mb-4 bg-success bg-opacity-10 text-success rounded-circle" style="width: 80px; height: 80px; font-size: 2.5rem;">
+                        <i class="ph ph-check"></i>
                     </div>
 
-                    <h4 class="card-title fw-bold mb-3 text-white">¡Revisa tu correo!</h4>
+                    <h4 class="card-title fw-bold mb-3">¡Revisa tu correo!</h4>
                     <p class="text-secondary mb-4">
                         Hemos enviado un enlace de acceso mágico a tu bandeja de entrada.
                         Haz clic en el botón del correo para entrar a la plataforma.
@@ -41,12 +41,12 @@
                         <strong><i class="ph ph-warning-circle"></i> Nota:</strong> El enlace expirará en 30 minutos.
                     </div>
 
-                    <hr class="my-4 border-secondary">
+                    <hr class="my-4 text-secondary opacity-25">
 
                     <p class="small text-secondary mb-3">¿No recibiste el correo?</p>
 
                     <div class="d-grid gap-2">
-                        <a href="/login-apoderados" class="btn btn-outline-secondary border-secondary text-secondary btn-sm py-2 rounded-3 d-flex align-items-center justify-content-center gap-2">
+                        <a href="/login-apoderados" class="btn btn-outline-secondary btn-sm py-2 rounded-3 d-flex align-items-center justify-content-center gap-2">
                             <i class="ph ph-arrow-counter-clockwise"></i>
                             Intentar con otro correo
                         </a>
@@ -58,7 +58,7 @@
             </div>
 
             <div class="mt-5 text-center">
-                <p class="text-secondary small" style="opacity: 0.6;">
+                <p class="text-secondary small">
                     &copy; 2026 Colegio John Crane - Sistema de Comunicación Escolar
                 </p>
             </div>

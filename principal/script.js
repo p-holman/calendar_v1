@@ -125,7 +125,7 @@ function renderizarActividades() {
             </div>
             <div class="flex-grow-1">
                 <div class="activity-subject text-uppercase fw-bold mb-1" style="font-size: 0.75rem;">${sub.name}</div>
-                <div class="fs-5 fw-semibold mb-2 text-white lh-sm">${act.title}</div>
+                <div class="fs-5 fw-semibold mb-2 text-dark lh-sm">${act.title}</div>
                 <div class="d-flex align-items-center gap-3 fs-6 text-secondary fw-medium">
                     <span class="d-flex align-items-center gap-1">
                         <i class="ph ${type.icon}"></i> ${type.name}
@@ -188,12 +188,12 @@ function abrirModal(actividad) {
     if (actividad.resources && actividad.resources.length > 0) {
         const tituloRecursos = document.createElement('h6');
         tituloRecursos.textContent = 'Material de Apoyo y Entregables';
-        tituloRecursos.className = 'text-white fw-bold mt-2 mb-3';
+        tituloRecursos.className = 'text-dark fw-bold mt-2 mb-3';
         contenedorRecursos.appendChild(tituloRecursos);
 
         actividad.resources.forEach(res => {
             const btnEnlace = document.createElement('a');
-            btnEnlace.className = 'resource-link text-white d-flex align-items-center gap-3 p-3 rounded-3';
+            btnEnlace.className = 'resource-link text-dark d-flex align-items-center gap-3 p-3 rounded-3';
             btnEnlace.href = res.url;
 
             // Asignar icono dinámico según extensión/tipo de recurso
